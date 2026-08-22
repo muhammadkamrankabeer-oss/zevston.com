@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Zevston | Building Lahore, One Course at a Time</title>
+<meta name="description" content="Zevston is a Lahore-based construction and real estate company delivering residential, commercial, and infrastructure projects with 13 years of hands-on experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#211C19;
+    --paper:#F1ECE2;
+    --paper-dim:#E5DECF;
+    --brick:#A6432B;
+    --brick-dark:#7C3020;
+    --steel:#4B5C61;
+    --sand:#C9A876;
+    --line:rgba(33,28,25,0.14);
+    --line-strong:rgba(33,28,25,0.28);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.slab{font-family:'Zilla Slab',serif;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--brick);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--brick);display:inline-block;}
+
+  /* brick bond band - the signature motif */
+  .bond{
+    height:14px;
+    width:100%;
+    background-image:
+      repeating-linear-gradient(90deg, var(--brick) 0 38px, var(--brick-dark) 38px 40px),
+      repeating-linear-gradient(90deg, var(--brick) 0 38px, var(--brick-dark) 38px 40px);
+    background-size: 80px 7px, 80px 7px;
+    background-position: 0 0, 40px 7px;
+    background-repeat: repeat-x, repeat-x;
+    background-color:var(--brick);
+  }
+  .bond.thin{height:7px;}
+
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 0;
+  }
+  .brand{
+    display:flex; align-items:baseline; gap:2px;
+    font-size:22px; font-weight:700; letter-spacing:-0.01em;
+  }
+  .brand .z{color:var(--brick);}
+  nav.links{display:flex; gap:32px; font-size:14.5px; font-weight:500;}
+  nav.links a{text-decoration:none; opacity:.82; transition:opacity .15s;}
+  nav.links a:hover{opacity:1;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:12px 22px;
+    background:var(--ink); color:var(--paper);
+    text-decoration:none; font-weight:600; font-size:14.5px;
+    border:1px solid var(--ink);
+  }
+  .btn:hover{background:var(--brick); border-color:var(--brick);}
+  .btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line-strong);}
+  .btn.ghost:hover{border-color:var(--ink);}
+  .menu-toggle{display:none;}
+
+  /* HERO */
+  .hero{
+    padding:88px 0 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:56px;
+    align-items:center;
+    padding-bottom:72px;
+  }
+  .hero h1{
+    font-size:clamp(40px,5.2vw,64px);
+    line-height:1.04;
+    font-weight:600;
+    margin:18px 0 22px;
+    letter-spacing:-0.01em;
+  }
+  .hero p.lede{
+    font-size:18px;
+    color:#4a433d;
+    max-width:46ch;
+    margin:0 0 32px;
+  }
+  .hero-cta{display:flex; gap:14px; flex-wrap:wrap;}
+  .wall{
+    position:relative;
+    aspect-ratio:4/5;
+    background:var(--paper-dim);
+    border:1px solid var(--line);
+    overflow:hidden;
+  }
+  .wall svg{width:100%; height:100%; display:block;}
+  .wall .tag{
+    position:absolute; left:16px; bottom:16px;
+    background:var(--paper);
+    border:1px solid var(--line-strong);
+    padding:8px 12px;
+    font-size:12px;
+  }
+  .wall .tag .mono{color:var(--brick); font-size:11px;}
+
+  /* STATS - dimension line style */
+  .stats{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    background:var(--paper-dim);
+  }
+  .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+  }
+  .stat{
+    padding:30px 24px;
+    border-left:1px solid var(--line);
+    position:relative;
+  }
+  .stat:first-child{border-left:none;}
+  .stat .num{font-family:'Zilla Slab',serif; font-size:38px; font-weight:600; color:var(--brick-dark);}
+  .stat .lab{font-size:12.5px; color:var(--steel); text-transform:uppercase; letter-spacing:.06em; margin-top:4px; font-weight:500;}
+
+  section{padding:96px 0;}
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,40px); font-weight:600; margin:14px 0 0; letter-spacing:-0.01em;}
+  .section-head p{color:#4a433d; margin-top:14px; font-size:16.5px;}
+
+  /* SERVICES */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .service{
+    background:var(--paper);
+    padding:32px 26px;
+  }
+  .service .idx{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--sand); border-top:3px solid var(--sand); display:inline-block; padding-top:8px; margin-bottom:22px;}
+  .service h3{font-size:19px; font-weight:600; margin:0 0 10px;}
+  .service p{font-size:14.5px; color:#544d46; margin:0;}
+
+  /* LEADERSHIP */
+  .leader{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:48px;
+    align-items:start;
+    background:var(--paper-dim);
+    border:1px solid var(--line);
+    padding:44px;
+  }
+  .avatar{
+    width:100%; aspect-ratio:1;
+    background:var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--paper); font-family:'Zilla Slab',serif; font-size:44px; font-weight:600;
+    position:relative;
+  }
+  .avatar::after{content:""; position:absolute; inset:10px; border:1px solid rgba(241,236,226,.35);}
+  .leader-copy .role{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--brick); text-transform:uppercase; letter-spacing:.1em;}
+  .leader-copy h3{font-size:26px; margin:8px 0 16px; font-weight:600;}
+  .leader-copy p{color:#4a433d; font-size:15.5px; max-width:60ch;}
+
+  /* PORTFOLIO */
+  .portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .pf-card{border:1px solid var(--line); background:var(--paper-dim); overflow:hidden;}
+  .pf-visual{
+    aspect-ratio:4/3;
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    background:var(--ink);
+  }
+  .pf-visual svg{width:60%; height:60%;}
+  .pf-body{padding:20px 22px 24px;}
+  .pf-cat{font-family:'IBM Plex Mono',monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--brick-dark);}
+  .pf-body h3{font-size:17px; margin:8px 0 4px; font-weight:600;}
+  .pf-body p{font-size:13.5px; color:var(--steel); margin:0;}
+
+  /* PROCESS - laid like courses */
+  .process{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+    counter-reset:course;
+  }
+  .course{
+    padding:0 26px 0 0;
+    border-right:1px solid var(--line);
+    position:relative;
+  }
+  .course:last-child{border-right:none; padding-right:0;}
+  .course-bar{height:8px; background:var(--sand); margin-bottom:24px; position:relative;}
+  .course:nth-child(1) .course-bar{background:var(--brick);}
+  .course:nth-child(2) .course-bar{background:var(--brick-dark); margin-left:14%;}
+  .course:nth-child(3) .course-bar{background:var(--steel); margin-left:28%;}
+  .course:nth-child(4) .course-bar{background:var(--ink); margin-left:42%;}
+  .course .n{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--steel);}
+  .course h3{font-size:18px; margin:8px 0 10px; font-weight:600;}
+  .course p{font-size:14px; color:#544d46; margin:0;}
+
+  /* WHY */
+  .why-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:32px;}
+  .why-item{padding-top:18px; border-top:2px solid var(--ink);}
+  .why-item h3{font-size:17px; margin:0 0 8px; font-weight:600;}
+  .why-item p{font-size:14.5px; color:#544d46; margin:0;}
+
+  /* FAQ */
+  .faq{max-width:760px;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer;
+    padding:22px 0; display:flex; justify-content:space-between; align-items:center;
+    font-family:'Zilla Slab',serif; font-size:18px; font-weight:600; color:var(--ink);
+  }
+  .faq-q .plus{font-family:'IBM Plex Mono',monospace; font-size:20px; color:var(--brick); transition:transform .2s;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
+  .faq-a p{margin:0 0 22px; font-size:15px; color:#4a433d; max-width:66ch;}
+
+  /* CONTACT */
+  .contact-wrap{
+    background:var(--ink); color:var(--paper);
+    padding:88px 0;
+  }
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px;}
+  .contact-wrap .eyebrow{color:var(--sand);}
+  .contact-wrap .eyebrow::before{background:var(--sand);}
+  .contact-wrap h2{font-size:clamp(28px,3.2vw,38px); font-weight:600; margin:14px 0 20px;}
+  .contact-wrap p.lede{color:#cfc6b8; max-width:48ch; margin-bottom:28px; font-size:16px;}
+  .contact-info{margin-top:32px;}
+  .contact-info .row{display:flex; gap:14px; padding:12px 0; border-top:1px solid rgba(241,236,226,.16);}
+  .contact-info .row .k{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--sand); width:90px; flex-shrink:0; padding-top:2px;}
+  .contact-info .row .v{font-size:15px;}
+  form{display:flex; flex-direction:column; gap:14px;}
+  form input, form select, form textarea{
+    background:transparent;
+    border:1px solid rgba(241,236,226,.3);
+    color:var(--paper);
+    padding:14px 16px;
+    font-family:'Work Sans',sans-serif;
+    font-size:14.5px;
+  }
+  form input::placeholder, form textarea::placeholder{color:#a89d8d;}
+  form select option{color:var(--ink);}
+  form textarea{resize:vertical; min-height:100px;}
+  form .btn{align-self:flex-start; background:var(--brick); border-color:var(--brick); margin-top:6px;}
+  form .btn:hover{background:var(--sand); border-color:var(--sand); color:var(--ink);}
+
+  footer{padding:40px 0; }
+  .footer-grid{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  .footer-grid .mono{font-size:12.5px; color:var(--steel);}
+
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;}
+    .wall{aspect-ratio:16/9;}
+    .stats-grid{grid-template-columns:repeat(2,1fr);}
+    .stat:nth-child(3){border-left:none;}
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .leader{grid-template-columns:1fr; padding:28px;}
+    .avatar{max-width:160px;}
+    .portfolio-grid{grid-template-columns:1fr 1fr;}
+    .process{grid-template-columns:1fr 1fr; row-gap:36px;}
+    .course{border-right:none; padding-right:0;}
+    .why-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr; gap:40px;}
+    nav.links{display:none;}
+  }
+  @media (max-width:560px){
+    .portfolio-grid{grid-template-columns:1fr;}
+    .process{grid-template-columns:1fr;}
+    .stats-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .faq-a{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="z">Zev</span>ston</div>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#work">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#contact" class="btn">Request a quote</a>
+  </div>
+  <div class="bond thin"></div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Lahore, Pakistan — Est. from 13 years in the field</div>
+      <h1>Built the way<br>Lahore builds:<br>course by course.</h1>
+      <p class="lede">Zevston plans, designs, and constructs homes, offices, and commercial spaces across Lahore — with the same discipline it takes to lay a wall true: one course, checked and levelled, before the next.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn">Start your project</a>
+        <a href="#work" class="btn ghost">See our work</a>
+      </div>
+    </div>
+    <div class="wall" aria-hidden="true">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="500" fill="#E5DECF"/>
+        <g id="courses"></g>
+      </svg>
+      <div class="tag"><div class="mono">DHA PHASE 5</div>Lahore site, ongoing build</div>
+    </div>
+  </div>
+  <div class="bond"></div>
+  <div class="wrap">
+    <div class="stats-grid" style="background:var(--paper-dim)">
+      <div class="stat"><div class="num">150+</div><div class="lab">Completed projects</div></div>
+      <div class="stat"><div class="num">120+</div><div class="lab">Clients served</div></div>
+      <div class="stat"><div class="num">13</div><div class="lab">Years in the field</div></div>
+      <div class="stat"><div class="num">50+</div><div class="lab">Team members</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What we do</div>
+      <h2>Four disciplines, one crew.</h2>
+      <p>From a single-family home to a full commercial plaza, every project runs through the same team — so nothing gets lost between the drawing and the delivery.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service">
+        <div class="idx mono">01</div>
+        <h3>Residential construction</h3>
+        <p>Custom homes and renovations built around how a family actually lives, not a stock floor plan.</p>
+      </div>
+      <div class="service">
+        <div class="idx mono">02</div>
+        <h3>Commercial construction</h3>
+        <p>Offices, retail, and industrial facilities designed for efficiency, durability, and brand identity.</p>
+      </div>
+      <div class="service">
+        <div class="idx mono">03</div>
+        <h3>Project management</h3>
+        <p>One point of accountability from permits and planning through final handover.</p>
+      </div>
+      <div class="service">
+        <div class="idx mono">04</div>
+        <h3>Sustainable building</h3>
+        <p>Energy-efficient design and materials that lower running costs long after we've left site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper-dim); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:40px;">
+      <div class="eyebrow">Leadership</div>
+    </div>
+    <div class="leader">
+      <div class="avatar">IK</div>
+      <div class="leader-copy">
+        <div class="role">Founder &amp; CEO</div>
+        <h3>Imran Kabeer</h3>
+        <p>Thirteen years leading construction projects across Lahore, from single homes to large-scale commercial plazas. Hands-on across planning, site supervision, quality control, and cost management — the four things that decide whether a project finishes on time or doesn't.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Recent work</div>
+      <h2>A few projects on the boards.</h2>
+      <p>Photography is being added as projects are documented — categories and scope shown below reflect real, delivered work.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="pf-card">
+        <div class="pf-visual"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 56V26L32 8l24 18v30H8Z" stroke="#F1ECE2" stroke-width="2"/><rect x="20" y="36" width="10" height="20" stroke="#F1ECE2" stroke-width="2"/><rect x="38" y="30" width="8" height="8" stroke="#F1ECE2" stroke-width="2"/></svg></div>
+        <div class="pf-body"><div class="pf-cat">Residential</div><h3>DHA Phase 5 house</h3><p>4,500 sq ft, custom family home</p></div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-visual"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="14" width="16" height="42" stroke="#F1ECE2" stroke-width="2"/><rect x="30" y="6" width="16" height="50" stroke="#F1ECE2" stroke-width="2"/><rect x="14" y="20" width="4" height="4" fill="#F1ECE2"/><rect x="34" y="12" width="4" height="4" fill="#F1ECE2"/></svg></div>
+        <div class="pf-body"><div class="pf-cat">Commercial</div><h3>Grand Hayat project</h3><p>Sealing contract, mixed-use plaza</p></div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-visual"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 50h52M12 50V22h10v28M32 50V16h10v34M52 50V30" stroke="#F1ECE2" stroke-width="2"/></svg></div>
+        <div class="pf-body"><div class="pf-cat">Civil works</div><h3>Large-scale civil project</h3><p>18,000 sq ft site</p></div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-visual"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 54V30l22-16 22 16v24" stroke="#F1ECE2" stroke-width="2"/><rect x="26" y="38" width="12" height="16" stroke="#F1ECE2" stroke-width="2"/></svg></div>
+        <div class="pf-body"><div class="pf-cat">Residential</div><h3>Modern villa design</h3><p>Custom home construction</p></div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-visual"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="18" width="48" height="36" stroke="#F1ECE2" stroke-width="2"/><path d="M8 30h48M20 18v36M36 18v36" stroke="#F1ECE2" stroke-width="1.5"/></svg></div>
+        <div class="pf-body"><div class="pf-cat">Commercial</div><h3>Office complex</h3><p>Efficient, brand-forward workspace</p></div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-visual"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="4" fill="#F1ECE2"/><path d="M32 8v20M32 36v20M8 32h20M36 32h20M15 15l14 14M35 35l14 14M49 15 35 29M29 35 15 49" stroke="#F1ECE2" stroke-width="1.5"/></svg></div>
+        <div class="pf-body"><div class="pf-cat">Infrastructure</div><h3>Community development</h3><p>Sustainable building solutions</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="background:var(--paper-dim); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">How we work</div>
+      <h2>Four courses, laid in order.</h2>
+      <p>Like a brick wall, each stage has to be true before the next one goes on top.</p>
+    </div>
+    <div class="process">
+      <div class="course"><div class="course-bar"></div><div class="n mono">Course 01</div><h3>Planning</h3><p>We understand your vision and set a plan that fits your goals and budget.</p></div>
+      <div class="course"><div class="course-bar"></div><div class="n mono">Course 02</div><h3>Design</h3><p>We shape a space around your needs, style, and how it'll actually be used.</p></div>
+      <div class="course"><div class="course-bar"></div><div class="n mono">Course 03</div><h3>Construction</h3><p>Every stage built with care, precision, and attention to quality standards.</p></div>
+      <div class="course"><div class="course-bar"></div><div class="n mono">Course 04</div><h3>Delivery</h3><p>Completed on time, within budget, ready to hand over.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why Zevston</div>
+      <h2>What distinguishes the work.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><h3>Experienced team</h3><p>Years of hands-on experience and dedication brought to every project.</p></div>
+      <div class="why-item"><h3>Modern methods</h3><p>Smarter, faster construction using current techniques and technology.</p></div>
+      <div class="why-item"><h3>Customer-focused</h3><p>We listen first, and we don't call a project done until you're satisfied.</p></div>
+      <div class="why-item"><h3>Quality control</h3><p>Every detail checked from foundation to finish, not just at handover.</p></div>
+      <div class="why-item"><h3>Sustainability</h3><p>Eco-friendly materials and energy-efficient design as standard practice.</p></div>
+      <div class="why-item"><h3>Cost management</h3><p>Transparent budgeting so there are no surprises partway through.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--paper-dim); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Questions</div>
+      <h2>Before you get in touch.</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What types of projects do you handle?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Everything from custom homes and renovations to offices, shops, industrial facilities, and infrastructure work — residential through large-scale commercial.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you offer sustainable building options?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes. We use eco-friendly materials and energy-efficient designs that lower both your environmental footprint and your running costs.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How do you ensure project quality?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Through structured planning, active site supervision, defined quality checkpoints, and disciplined cost management from the first day to handover.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How do I get a quote?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Send us your project details through the form below, or call us directly — we'll get back to you to scope the work and timeline.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-wrap">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow">Get in touch</div>
+      <h2>Let's build together.</h2>
+      <p class="lede">Tell us about your project — residential, commercial, or somewhere in between — and we'll come back with a plan and a quote.</p>
+      <div class="contact-info">
+        <div class="row"><div class="k mono">Location</div><div class="v">DHA Phase 5, Lahore, Pakistan</div></div>
+        <div class="row"><div class="k mono">Phone</div><div class="v">0333 4434464 &nbsp;•&nbsp; 0322 5377072</div></div>
+        <div class="row"><div class="k mono">Email</div><div class="v">info@zevston.com</div></div>
+      </div>
+    </div>
+    <form action="mailto:info@zevston.com" method="post" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your full name" required>
+      <input type="email" name="Email" placeholder="Email address" required>
+      <select name="Service" required>
+        <option value="" disabled selected>Select a service</option>
+        <option>Residential construction</option>
+        <option>Commercial construction</option>
+        <option>Project management</option>
+        <option>Sustainable building</option>
+        <option>Renovations and additions</option>
+        <option>Consultation</option>
+        <option>Other</option>
+      </select>
+      <textarea name="Details" placeholder="Tell us about your project" required></textarea>
+      <button type="submit" class="btn">Send request</button>
+    </form>
+  </div>
+</section>
+
+<div class="bond thin"></div>
+<footer>
+  <div class="wrap footer-grid">
+    <div class="brand" style="font-size:17px;"><span class="z">Zev</span>ston</div>
+    <div class="mono">© 2026 Zevston Construction. DHA Phase 5, Lahore, Pakistan.</div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var svgNS = "http://www.w3.org/2000/svg";
+    var g = document.getElementById('courses');
+    if(g){
+      var rowH = 22, brickW = 66, gap = 3, colors = ['#A6432B','#7C3020'];
+      for(var row = 0; row < 22; row++){
+        var offset = (row % 2 === 0) ? 0 : -brickW/2;
+        var y = 500 - (row+1)*rowH;
+        if(y < -rowH) continue;
+        for(var x = offset; x < 400; x += brickW + gap){
+          var rect = document.createElementNS(svgNS, 'rect');
+          rect.setAttribute('x', x);
+          rect.setAttribute('y', y);
+          rect.setAttribute('width', brickW);
+          rect.setAttribute('height', rowH - gap);
+          rect.setAttribute('fill', colors[(row + Math.floor((x+brickW)/brickW)) % 2]);
+          rect.setAttribute('opacity', '0');
+          g.appendChild(rect);
+        }
+      }
+      var bricks = g.querySelectorAll('rect');
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(prefersReduced){
+        bricks.forEach(function(b){ b.setAttribute('opacity','1'); });
+      } else {
+        bricks.forEach(function(b, i){
+          setTimeout(function(){ b.setAttribute('opacity','1'); }, i * 4);
+        });
+      }
+    }
+
+    document.querySelectorAll('.faq-item').forEach(function(item){
+      var q = item.querySelector('.faq-q');
+      var a = item.querySelector('.faq-a');
+      q.addEventListener('click', function(){
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(other){
+          if(other !== item){
+            other.classList.remove('open');
+            other.querySelector('.faq-a').style.maxHeight = null;
+            other.querySelector('.faq-q').setAttribute('aria-expanded','false');
+          }
+        });
+        if(isOpen){
+          item.classList.remove('open');
+          a.style.maxHeight = null;
+          q.setAttribute('aria-expanded','false');
+        } else {
+          item.classList.add('open');
+          a.style.maxHeight = a.scrollHeight + 'px';
+          q.setAttribute('aria-expanded','true');
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
