@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zevston | Engineering & Construction Solutions in Lahore</title>
-  <meta name="description" content="Zevston delivers residential, commercial, project management and construction solutions in Lahore, Pakistan.">
+  <title>Zevston | Engineering, Construction & Interiors in Lahore</title>
+  <meta name="description" content="Zevston delivers residential and commercial construction alongside interior design and custom woodwork — two specialized divisions, one team, in Lahore, Pakistan.">
   <meta name="theme-color" content="#211C19">
-  <meta property="og:title" content="Zevston | Engineering & Construction">
-  <meta property="og:description" content="Professional construction and project solutions for residential and commercial projects in Lahore.">
+  <meta property="og:title" content="Zevston | Engineering, Construction & Interiors">
+  <meta property="og:description" content="Complete construction and interior solutions for residential and commercial projects in Lahore — from civil engineering to custom woodwork.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zevston.com/">
   <link rel="canonical" href="https://zevston.com/">
@@ -323,6 +323,47 @@
       color:var(--paper);
       font:600 58px "Zilla Slab",serif;
     }
+
+    /* DIVISIONS */
+    .divisions{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .division-card{
+      border:1px solid var(--line-dark);
+      background:var(--paper-2);
+      overflow:hidden;
+      text-decoration:none;
+      color:var(--ink);
+      display:flex;
+      flex-direction:column;
+      transition:.2s ease;
+    }
+    .division-card:hover{border-color:var(--brick);transform:translateY(-3px)}
+    .division-photo{
+      aspect-ratio:4/3.2;
+      overflow:hidden;
+      position:relative;
+      background:#d7cbbb;
+    }
+    .division-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+    .division-tag{
+      position:absolute;top:16px;left:16px;
+      background:var(--brick);color:var(--white);
+      font:600 10.5px "IBM Plex Mono",monospace;
+      text-transform:uppercase;letter-spacing:.09em;
+      padding:6px 10px;
+    }
+    .division-card:nth-child(2) .division-tag{background:var(--steel)}
+    .division-body{padding:26px 28px 30px;flex:1;display:flex;flex-direction:column}
+    .division-body .who{color:var(--brick-dark);font:600 11px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+    .division-card:nth-child(2) .division-body .who{color:var(--steel)}
+    .division-body h3{font-size:25px;margin:0 0 10px}
+    .division-body p{font-size:14.5px;color:#554d45;margin:0 0 18px;flex:1}
+    .division-link{font:600 13px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+    .division-card:hover .division-link{color:var(--brick)}
+
+    /* TEAM (two leaders) */
+    .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .team-grid .leader{grid-template-columns:190px 1fr;padding:30px;gap:28px}
+    .team-grid .founder-photo{aspect-ratio:1/1.1}
     .leader .role{
       color:var(--brick);
       font:600 12px "IBM Plex Mono",monospace;
@@ -482,6 +523,8 @@
       .process{grid-template-columns:1fr 1fr;gap:35px}
       .step{border-right:0;margin-right:0;padding-right:0}
       .why{grid-template-columns:1fr 1fr}
+      .divisions,.team-grid{grid-template-columns:1fr}
+      .team-grid .leader{grid-template-columns:170px 1fr}
     }
 
     @media (max-width:720px){
@@ -505,7 +548,7 @@
       }
       header.mobile-open nav.links a{padding:12px 4px;border-bottom:1px solid var(--line)}
       header.mobile-open nav.links a:last-child{border-bottom:0}
-      .leader{grid-template-columns:1fr;padding:24px}
+      .leader,.team-grid .leader{grid-template-columns:1fr;padding:24px}
       .founder-photo{max-width:260px}
       .projects,.services,.mission-grid,.why{grid-template-columns:1fr}
       .trust-item{padding:24px 16px}
@@ -529,10 +572,10 @@
     <a class="brand" href="#top" aria-label="Zevston home"><span class="accent">Zev</span>ston</a>
 
     <nav class="links" id="main-nav" aria-label="Main navigation">
+      <a href="#expertise">Expertise</a>
       <a href="#services">Services</a>
-      <a href="#about">About</a>
+      <a href="#team">Our Team</a>
       <a href="#projects">Projects</a>
-      <a href="#process">Process</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -548,11 +591,12 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow">Lahore, Pakistan · Construction & Project Solutions</div>
-        <h1>Engineering ideas into <span>lasting spaces.</span></h1>
+        <div class="eyebrow">Lahore, Pakistan · Engineering · Construction · Interiors</div>
+        <h1>Building spaces. <span>Creating experiences.</span></h1>
         <p class="lede">
-          Zevston delivers practical construction and project solutions for residential,
-          commercial and infrastructure work — with a focus on quality, supervision and client satisfaction.
+          Zevston brings civil engineering and construction together with interior design and
+          custom woodwork — one team taking a project from foundation to final finish, so you don't
+          need to hire two companies to get there.
         </p>
 
         <div class="hero-actions">
@@ -602,19 +646,62 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services">
+  <!-- DIVISIONS -->
+  <section id="expertise">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">What we do</div>
-        <h2>Construction services built around the project.</h2>
+        <div class="eyebrow">Our expertise</div>
+        <h2>One company, two specialized divisions.</h2>
         <p>
-          Our services cover the main stages of residential, commercial and infrastructure work,
-          from planning and construction through project management and sustainable building solutions.
+          Design, civil work, construction, interior design and woodwork — handled by one accountable
+          team instead of separate contractors who don't talk to each other.
         </p>
       </div>
 
-      <div class="services">
+      <div class="divisions">
+        <a class="division-card" href="#services">
+          <div class="division-photo">
+            <div class="division-tag">Construction</div>
+            <img src="images/imran.jpg" alt="Muhammad Imran Kabeer, Civil Engineer at Zevston">
+          </div>
+          <div class="division-body">
+            <div class="who">Muhammad Imran Kabeer · Civil Engineer</div>
+            <h3>Civil Engineering & Construction</h3>
+            <p>Structural coordination, site supervision, project management and full build execution for residential and commercial projects.</p>
+            <span class="division-link">View construction services →</span>
+          </div>
+        </a>
+
+        <a class="division-card" href="#services">
+          <div class="division-photo">
+            <div class="division-tag">Interiors</div>
+            <img src="images/jabran.jpg" alt="Muhammad Jabran Kabeer, Interior Designer at Zevston">
+          </div>
+          <div class="division-body">
+            <div class="who">Muhammad Jabran Kabeer · Interior Designer</div>
+            <h3>Interior Design & Woodwork</h3>
+            <p>Space planning, custom furniture, kitchens, wardrobes and office interiors, finished with in-house woodwork.</p>
+            <span class="division-link">View interior services →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">What we do</div>
+        <h2>Services across both divisions.</h2>
+        <p>
+          From planning and structural work through to the last piece of custom furniture —
+          the two divisions cover a project end to end.
+        </p>
+      </div>
+
+      <div class="eyebrow" style="margin-bottom:16px;">Civil engineering & construction</div>
+      <div class="services" style="margin-bottom:22px;">
         <article class="service">
           <div class="num">01 · Residential</div>
           <h3>Residential Construction</h3>
@@ -639,6 +726,33 @@
           <p>Eco-friendly materials and energy-efficient approaches where they make practical sense for the project.</p>
         </article>
       </div>
+
+      <div class="eyebrow" style="margin-bottom:16px;">Interior design & woodwork</div>
+      <div class="services">
+        <article class="service">
+          <div class="num">05 · Design</div>
+          <h3>Interior Design & Space Planning</h3>
+          <p>Layouts and finishes planned around how each room will actually be used, not a generic template.</p>
+        </article>
+
+        <article class="service">
+          <div class="num">06 · Woodwork</div>
+          <h3>Custom Woodwork & Furniture</h3>
+          <p>In-house woodwork for custom furniture pieces, built to the exact dimensions of the space.</p>
+        </article>
+
+        <article class="service">
+          <div class="num">07 · Kitchens</div>
+          <h3>Kitchens & Wardrobes</h3>
+          <p>Fitted kitchens and wardrobes designed for storage, workflow and finish quality.</p>
+        </article>
+
+        <article class="service">
+          <div class="num">08 · Offices</div>
+          <h3>Office Interiors</h3>
+          <p>Workspace interiors and finishing built for practicality as much as appearance.</p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -649,66 +763,89 @@
         <div class="eyebrow">About Zevston</div>
         <h2>A practical partner for your next project.</h2>
         <p>
-          Zevston is a Lahore-based construction company focused on residential, commercial
-          and infrastructure projects. The company brings hands-on construction experience,
-          project coordination and a client-focused approach to each engagement.
+          Zevston is a Lahore-based company built around two complementary divisions: civil engineering
+          and construction, and interior design with custom woodwork. The two work together so a project
+          can move from foundation to final finish without switching contractors.
         </p>
         <p>
           Our goal is straightforward: understand the requirement, plan the work carefully,
-          supervise execution and deliver a finished project that meets the agreed expectations.
+          supervise execution and deliver a finished project — structure and interior — that meets
+          the agreed expectations.
         </p>
       </div>
 
       <div>
         <div class="about-list">
-          <div>Residential & commercial work</div>
+          <div>Residential & commercial construction</div>
+          <div>Interior design & space planning</div>
+          <div>Custom woodwork & furniture</div>
           <div>Project planning & supervision</div>
-          <div>Quality-focused execution</div>
-          <div>Cost-conscious coordination</div>
+          <div>Kitchens, wardrobes & office interiors</div>
           <div>Renovations & additions</div>
-          <div>Consultation & project support</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOUNDER -->
-  <section>
+  <!-- TEAM -->
+  <section id="team">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Leadership</div>
-        <h2>Led by experience on the ground.</h2>
+        <div class="eyebrow">Meet the team</div>
+        <h2>Two specialists, one company.</h2>
+        <p>
+          Zevston is a family business — two brothers, each leading their own division, working
+          together on every project.
+        </p>
       </div>
 
-      <div class="leader">
-        <div class="founder-photo">
-          <!--
-            Put the founder's real photograph from the previous HTI website here:
-            assets/images/imran-kabeer.jpg
-
-            The fallback initials will appear automatically if the image is not present.
-          -->
-          <img
-            src="assets/images/imran-kabeer.jpg"
-            alt="Imran Kabeer, Founder and CEO of Zevston"
-            onerror="this.style.display='none';document.getElementById('founder-fallback').style.display='grid';"
-          >
-          <div class="founder-fallback" id="founder-fallback" style="display:none;">IK</div>
+      <div class="team-grid">
+        <div class="leader">
+          <div class="founder-photo">
+            <img
+              src="images/imran.jpg"
+              alt="Muhammad Imran Kabeer, Civil Engineer and Construction Lead at Zevston"
+              onerror="this.style.display='none';document.getElementById('founder-fallback-1').style.display='grid';"
+            >
+            <div class="founder-fallback" id="founder-fallback-1" style="display:none;">IK</div>
+          </div>
+          <div>
+            <div class="role">Civil Engineer · Construction & Project Management</div>
+            <h3>Muhammad Imran Kabeer</h3>
+            <p>
+              13 years of hands-on experience in Pakistan's construction industry — project planning,
+              site supervision, structural coordination and cost management, from residential houses
+              to large-scale commercial projects.
+            </p>
+            <div class="credentials">
+              <span class="pill">13 Years Experience</span>
+              <span class="pill">Site Supervision</span>
+              <span class="pill">Quality Control</span>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <div class="role">Founder & CEO</div>
-          <h3>Imran Kabeer</h3>
-          <p>
-            Imran Kabeer brings 13 years of hands-on experience in Pakistan's construction industry.
-            His experience includes project planning, site supervision, quality control and cost management,
-            with work ranging from residential houses to large-scale commercial projects.
-          </p>
-          <div class="credentials">
-            <span class="pill">13 Years Experience</span>
-            <span class="pill">Project Planning</span>
-            <span class="pill">Site Supervision</span>
-            <span class="pill">Quality Control</span>
+        <div class="leader">
+          <div class="founder-photo">
+            <img
+              src="images/jabran.jpg"
+              alt="Muhammad Jabran Kabeer, Interior Designer at Zevston"
+              onerror="this.style.display='none';document.getElementById('founder-fallback-2').style.display='grid';"
+            >
+            <div class="founder-fallback" id="founder-fallback-2" style="display:none;">JK</div>
+          </div>
+          <div>
+            <div class="role">Interior Designer · Woodwork & Custom Interiors</div>
+            <h3>Muhammad Jabran Kabeer</h3>
+            <p>
+              Leads Zevston's interior division — space planning, custom furniture and in-house
+              woodwork for kitchens, wardrobes and office interiors, finished to match each space.
+            </p>
+            <div class="credentials">
+              <span class="pill">Interior Design</span>
+              <span class="pill">Custom Woodwork</span>
+              <span class="pill">Space Planning</span>
+            </div>
           </div>
         </div>
       </div>
@@ -758,27 +895,27 @@
         <article class="project">
           <div class="project-image"><span>Project photograph</span></div>
           <div class="project-body">
-            <div class="project-cat">Residential</div>
-            <h3>Modern Villa Design</h3>
-            <p>Custom home construction.</p>
+            <div class="project-cat">Interiors</div>
+            <h3>Custom Kitchen & Wardrobes</h3>
+            <p>In-house woodwork, fitted kitchen and wardrobe suite.</p>
           </div>
         </article>
 
         <article class="project">
           <div class="project-image"><span>Project photograph</span></div>
           <div class="project-body">
-            <div class="project-cat">Commercial</div>
-            <h3>Office Complex</h3>
-            <p>Efficient workspace design and construction.</p>
+            <div class="project-cat">Interiors</div>
+            <h3>Office Interior Fit-Out</h3>
+            <p>Space planning and interior finishing for a working office.</p>
           </div>
         </article>
 
         <article class="project">
           <div class="project-image"><span>Project photograph</span></div>
           <div class="project-body">
-            <div class="project-cat">Infrastructure</div>
-            <h3>Community Development</h3>
-            <p>Sustainable building solutions.</p>
+            <div class="project-cat">Woodwork</div>
+            <h3>Custom Furniture Suite</h3>
+            <p>Bespoke furniture built to the exact dimensions of the space.</p>
           </div>
         </article>
       </div>
@@ -958,7 +1095,7 @@
           <div class="contact-row">
             <div class="key">Phone</div>
             <div class="value">
-              <a href="tel:+923000897716">0300 0897716</a><br>
+              <a href="tel:+923334434464">0333 4434464</a><br>
               <a href="tel:+923225377072">0322 5377072</a>
             </div>
           </div>
@@ -970,7 +1107,7 @@
 
         <div class="contact-actions">
           <a class="btn brick" href="mailto:contact@zevston.com?subject=Zevston%20Project%20Enquiry">Email Zevston</a>
-          <a class="btn alt" href="https://wa.me/923000897716" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn alt" href="https://wa.me/923334434464" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
 
@@ -997,7 +1134,9 @@
     <a class="brand" href="#top" style="font-size:19px;text-decoration:none"><span class="accent">Zev</span>ston</a>
     <small>© 2026 Zevston Construction · Lahore, Pakistan</small>
     <div class="footer-links">
+      <a href="#expertise">Expertise</a>
       <a href="#services">Services</a>
+      <a href="#team">Our Team</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
