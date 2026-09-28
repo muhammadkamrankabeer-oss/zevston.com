@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta property="og:image" content="https://zevston.com/og-image.png">
   <title>Zevston | Engineering, Construction & Interiors in Lahore</title>
   <meta name="description" content="Zevston delivers residential and commercial construction alongside interior design and custom woodwork — two specialized divisions, one team, in Lahore, Pakistan.">
   <meta name="theme-color" content="#211C19">
@@ -93,13 +96,23 @@
       gap:24px;
     }
     .brand{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
       text-decoration:none;
-      font-size:25px;
-      font-weight:700;
-      letter-spacing:-.02em;
       white-space:nowrap;
+      color:var(--ink);
     }
-    .brand .accent{color:var(--brick)}
+    .brand img{height:46px;width:auto;display:block}
+    .brand .word{
+      font-family:"Work Sans",sans-serif;
+      font-weight:600;
+      font-size:17px;
+      letter-spacing:.26em;
+      text-transform:uppercase;
+    }
+    .brand.sm img{height:34px}
+    .brand.sm .word{font-size:14px}
     nav.links{
       display:flex;
       align-items:center;
@@ -569,7 +582,7 @@
 <body>
 <header id="site-header">
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Zevston home"><span class="accent">Zev</span>ston</a>
+    <a class="brand" href="#top" aria-label="Zevston home"><img src="logo-mark.png" alt=""><span class="word">Zevston</span></a>
 
     <nav class="links" id="main-nav" aria-label="Main navigation">
       <a href="#expertise">Expertise</a>
@@ -1131,7 +1144,7 @@
 
 <footer>
   <div class="wrap footer-grid">
-    <a class="brand" href="#top" style="font-size:19px;text-decoration:none"><span class="accent">Zev</span>ston</a>
+    <a class="brand sm" href="#top" aria-label="Zevston home"><img src="logo-mark.png" alt=""><span class="word">Zevston</span></a>
     <small>© 2026 Zevston Construction · Lahore, Pakistan</small>
     <div class="footer-links">
       <a href="#expertise">Expertise</a>
