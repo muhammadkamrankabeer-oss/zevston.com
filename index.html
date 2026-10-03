@@ -2,614 +2,267 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <meta property="og:image" content="https://zevston.com/og-image.png">
-  <title>Zevston | Engineering, Construction & Interiors in Lahore</title>
-  <meta name="description" content="Zevston delivers residential and commercial construction alongside interior design and custom woodwork — two specialized divisions, one team, in Lahore, Pakistan.">
-  <meta name="theme-color" content="#211C19">
-  <meta property="og:title" content="Zevston | Engineering, Construction & Interiors">
-  <meta property="og:description" content="Complete construction and interior solutions for residential and commercial projects in Lahore — from civil engineering to custom woodwork.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://zevston.com/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Zevston | Construction & Interior Design in Lahore</title>
+  <meta name="description" content="Zevston is a Lahore construction and interior design company: civil engineering, residential and commercial building, custom woodwork, kitchens and office interiors under one team.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://zevston.com/">
+  <meta name="theme-color" content="#211C19">
+  <meta name="author" content="Zevston">
+
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="256x256">
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:site_name" content="Zevston">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zevston | Construction & Interior Design in Lahore">
+  <meta property="og:description" content="Zevston is a Lahore construction and interior design company: civil engineering, residential and commercial building, custom woodwork, kitchens and office interiors under one team.">
+  <meta property="og:url" content="https://zevston.com/">
+  <meta property="og:image" content="https://zevston.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Zevston: construction, architecture and interiors in Lahore">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zevston | Construction & Interior Design in Lahore">
+  <meta name="twitter:description" content="Zevston is a Lahore construction and interior design company: civil engineering, residential and commercial building, custom woodwork, kitchens and office interiors under one team.">
+  <meta name="twitter:image" content="https://zevston.com/og-image.png">
+
+  <!-- Google Search Console: verify via DNS TXT in Cloudflare (recommended), or paste the meta tag here:
+  <meta name="google-site-verification" content="PASTE_TOKEN_HERE"> -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600;700&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
 
-  <style>
-    :root{
-      --ink:#211C19;
-      --paper:#F4EFE5;
-      --paper-2:#E8E0D1;
-      --brick:#A6432B;
-      --brick-dark:#7C3020;
-      --sand:#C9A876;
-      --steel:#536267;
-      --line:rgba(33,28,25,.15);
-      --line-dark:rgba(33,28,25,.28);
-      --white:#fffaf0;
-      --max:1160px;
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "@id": "https://zevston.com/#organization",
+  "name": "Zevston",
+  "url": "https://zevston.com/",
+  "logo": "https://zevston.com/logo-mark.png",
+  "image": "https://zevston.com/og-image.png",
+  "description": "Zevston is a Lahore, Pakistan company offering civil engineering and construction alongside interior design and custom woodwork.",
+  "slogan": "Building spaces. Creating experiences.",
+  "email": "contact@zevston.com",
+  "telephone": "+923334434464",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "DHA Phase 5",
+    "addressLocality": "Lahore",
+    "addressRegion": "Punjab",
+    "addressCountry": "PK"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Lahore"
+  },
+  "founder": [
+    {
+      "@type": "Person",
+      "@id": "https://zevston.com/imran-kabeer/#person",
+      "name": "Muhammad Imran Kabeer",
+      "jobTitle": "Civil Engineer",
+      "url": "https://zevston.com/imran-kabeer/"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://zevston.com/jabran-kabeer/#person",
+      "name": "Muhammad Jabran Kabeer",
+      "jobTitle": "Interior Designer",
+      "url": "https://zevston.com/jabran-kabeer/"
     }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      background:var(--paper);
-      color:var(--ink);
-      font-family:"Work Sans",sans-serif;
-      line-height:1.65;
-      -webkit-font-smoothing:antialiased;
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+923334434464",
+      "email": "contact@zevston.com",
+      "areaServed": "PK"
     }
-    img{display:block;max-width:100%}
-    a{color:inherit}
-    button,input,textarea,select{font:inherit}
-    .wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
-
-    h1,h2,h3{font-family:"Zilla Slab",serif;line-height:1.08}
-    h1,h2,h3,p{margin-top:0}
-    .mono{
-      font-family:"IBM Plex Mono",monospace;
-      text-transform:uppercase;
-      letter-spacing:.1em;
-    }
-
-    .eyebrow{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      color:var(--brick);
-      font:600 12px/1.2 "IBM Plex Mono",monospace;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-    .eyebrow::before{
-      content:"";
-      width:28px;
-      height:2px;
-      background:currentColor;
-    }
-
-    .bond{
-      height:9px;
-      background:
-        linear-gradient(90deg,var(--brick) 0 38px,var(--brick-dark) 38px 40px) 0 0/80px 50% repeat-x,
-        linear-gradient(90deg,var(--brick) 0 38px,var(--brick-dark) 38px 40px) 40px 100%/80px 50% repeat-x;
-    }
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:rgba(244,239,229,.96);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      min-height:76px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:24px;
-    }
-    .brand{
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      text-decoration:none;
-      white-space:nowrap;
-      color:var(--ink);
-    }
-    .brand img{height:46px;width:auto;display:block}
-    .brand .word{
-      font-family:"Work Sans",sans-serif;
-      font-weight:600;
-      font-size:17px;
-      letter-spacing:.26em;
-      text-transform:uppercase;
-    }
-    .brand.sm img{height:34px}
-    .brand.sm .word{font-size:14px}
-    nav.links{
-      display:flex;
-      align-items:center;
-      gap:26px;
-      font-size:14px;
-      font-weight:600;
-    }
-    nav.links a{text-decoration:none;opacity:.78}
-    nav.links a:hover{opacity:1;color:var(--brick)}
-    .nav-cta{margin-left:auto}
-
-    .menu-btn{
-      display:none;
-      border:1px solid var(--line-dark);
-      background:transparent;
-      padding:10px 12px;
-      cursor:pointer;
-      font-weight:700;
-    }
-
-    .btn{
-      display:inline-flex;
-      justify-content:center;
-      align-items:center;
-      gap:9px;
-      padding:13px 20px;
-      border:1px solid var(--ink);
-      background:var(--ink);
-      color:var(--white);
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
-      transition:.2s ease;
-    }
-    .btn:hover{background:var(--brick);border-color:var(--brick);transform:translateY(-1px)}
-    .btn.alt{
-      background:transparent;
-      color:var(--ink);
-      border-color:var(--line-dark);
-    }
-    .btn.alt:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
-    .btn.brick{background:var(--brick);border-color:var(--brick)}
-    .btn.brick:hover{background:var(--brick-dark);border-color:var(--brick-dark)}
-
-    section{padding:92px 0}
-    .section-head{max-width:700px;margin-bottom:48px}
-    .section-head h2{font-size:clamp(32px,4vw,48px);margin:14px 0}
-    .section-head p{color:#554d45;font-size:16.5px;max-width:64ch}
-
-    /* HERO */
-    .hero{padding:72px 0 0;overflow:hidden}
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.06fr .94fr;
-      gap:64px;
-      align-items:center;
-      padding-bottom:72px;
-    }
-    .hero h1{
-      font-size:clamp(44px,6vw,72px);
-      margin:18px 0 24px;
-      letter-spacing:-.025em;
-    }
-    .hero h1 span{color:var(--brick)}
-    .hero .lede{
-      color:#504840;
-      font-size:18px;
-      max-width:60ch;
-      margin-bottom:30px;
-    }
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-    .hero-note{
-      display:flex;
-      gap:16px;
-      align-items:flex-start;
-      margin-top:30px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
-      max-width:620px;
-    }
-    .hero-note strong{font-family:"Zilla Slab",serif;font-size:18px}
-    .hero-note p{margin:2px 0 0;color:#665d54;font-size:13.5px}
-
-    .hero-visual{
-      position:relative;
-      min-height:530px;
-      border:1px solid var(--line);
-      background:var(--paper-2);
-      overflow:hidden;
-    }
-    .hero-visual::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(90deg,transparent 49.8%,rgba(33,28,25,.09) 50%,transparent 50.2%),
-        linear-gradient(0deg,transparent 49.8%,rgba(33,28,25,.09) 50%,transparent 50.2%);
-      background-size:70px 70px;
-      opacity:.55;
-    }
-    .hero-architecture{
-      position:absolute;
-      inset:45px 45px 0;
-      border:1px solid rgba(33,28,25,.16);
-      background:linear-gradient(145deg,#d7cbbb,#f0eadf);
-      clip-path:polygon(0 30%,35% 0,100% 18%,100% 100%,0 100%);
-    }
-    .hero-architecture::before,
-    .hero-architecture::after{
-      content:"";
-      position:absolute;
-      border:2px solid var(--brick);
-      opacity:.85;
-    }
-    .hero-architecture::before{width:52%;height:46%;left:20%;top:28%}
-    .hero-architecture::after{width:26%;height:30%;right:9%;bottom:10%;border-color:var(--steel)}
-    .hero-label{
-      position:absolute;
-      left:22px;
-      bottom:22px;
-      background:var(--paper);
-      border:1px solid var(--line-dark);
-      padding:13px 16px;
-      z-index:2;
-    }
-    .hero-label .mono{font-size:10px;color:var(--brick)}
-    .hero-label strong{display:block;margin-top:4px;font-family:"Zilla Slab",serif;font-size:18px}
-
-    /* TRUST */
-    .trust{
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-      background:var(--paper-2);
-    }
-    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-    .trust-item{padding:28px 22px;border-left:1px solid var(--line)}
-    .trust-item:first-child{border-left:0}
-    .trust-num{font:600 39px/1 "Zilla Slab",serif;color:var(--brick-dark)}
-    .trust-label{
-      margin-top:7px;
-      color:var(--steel);
-      font:500 11px/1.4 "IBM Plex Mono",monospace;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-    }
-
-    /* SERVICES */
-    .services{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      border:1px solid var(--line-dark);
-      background:var(--line-dark);
-      gap:1px;
-    }
-    .service{
-      background:var(--paper);
-      padding:30px 26px 34px;
-      min-height:245px;
-    }
-    .service .num{
-      display:inline-block;
-      border-top:3px solid var(--sand);
-      padding-top:8px;
-      color:var(--brick);
-      font:500 11px "IBM Plex Mono",monospace;
-    }
-    .service h3{font-size:22px;margin:25px 0 12px}
-    .service p{font-size:14px;color:#5b534b;margin-bottom:0}
-
-    /* ABOUT */
-    .about{
-      background:var(--paper-2);
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
-    .about-grid{
-      display:grid;
-      grid-template-columns:.9fr 1.1fr;
-      gap:64px;
-      align-items:center;
-    }
-    .about-copy h2{font-size:clamp(32px,4vw,48px);margin:14px 0 18px}
-    .about-copy p{color:#554d45}
-    .about-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
-    .about-list div{
-      border-top:2px solid var(--ink);
-      padding-top:12px;
-      font-weight:700;
-      font-size:14px;
-    }
-
-    /* FOUNDER */
-    .leader{
-      display:grid;
-      grid-template-columns:270px 1fr;
-      gap:52px;
-      align-items:center;
-      background:var(--paper-2);
-      border:1px solid var(--line);
-      padding:36px;
-    }
-    .founder-photo{
-      aspect-ratio:1/1.08;
-      background:#d7cbbb;
-      border:1px solid var(--line-dark);
-      overflow:hidden;
-      position:relative;
-    }
-    .founder-photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center top;
-    }
-    .founder-fallback{
-      position:absolute;
-      inset:0;
-      display:grid;
-      place-items:center;
-      background:var(--ink);
-      color:var(--paper);
-      font:600 58px "Zilla Slab",serif;
-    }
-
-    /* DIVISIONS */
-    .divisions{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .division-card{
-      border:1px solid var(--line-dark);
-      background:var(--paper-2);
-      overflow:hidden;
-      text-decoration:none;
-      color:var(--ink);
-      display:flex;
-      flex-direction:column;
-      transition:.2s ease;
-    }
-    .division-card:hover{border-color:var(--brick);transform:translateY(-3px)}
-    .division-photo{
-      aspect-ratio:4/3.2;
-      overflow:hidden;
-      position:relative;
-      background:#d7cbbb;
-    }
-    .division-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
-    .division-tag{
-      position:absolute;top:16px;left:16px;
-      background:var(--brick);color:var(--white);
-      font:600 10.5px "IBM Plex Mono",monospace;
-      text-transform:uppercase;letter-spacing:.09em;
-      padding:6px 10px;
-    }
-    .division-card:nth-child(2) .division-tag{background:var(--steel)}
-    .division-body{padding:26px 28px 30px;flex:1;display:flex;flex-direction:column}
-    .division-body .who{color:var(--brick-dark);font:600 11px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
-    .division-card:nth-child(2) .division-body .who{color:var(--steel)}
-    .division-body h3{font-size:25px;margin:0 0 10px}
-    .division-body p{font-size:14.5px;color:#554d45;margin:0 0 18px;flex:1}
-    .division-link{font:600 13px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);display:inline-flex;align-items:center;gap:8px}
-    .division-card:hover .division-link{color:var(--brick)}
-
-    /* TEAM (two leaders) */
-    .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .team-grid .leader{grid-template-columns:190px 1fr;padding:30px;gap:28px}
-    .team-grid .founder-photo{aspect-ratio:1/1.1}
-    .leader .role{
-      color:var(--brick);
-      font:600 12px "IBM Plex Mono",monospace;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-    .leader h3{font-size:34px;margin:9px 0 16px}
-    .leader p{color:#554d45;max-width:65ch}
-    .credentials{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-    .pill{
-      padding:8px 11px;
-      border:1px solid var(--line-dark);
-      font-size:12px;
-      background:var(--paper);
-    }
-
-    /* PROJECTS */
-    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .project{
-      border:1px solid var(--line);
-      background:var(--paper-2);
-      overflow:hidden;
-    }
-    .project-image{
-      aspect-ratio:4/3;
-      background:
-        linear-gradient(135deg,rgba(166,67,43,.9),rgba(33,28,25,.92)),
-        repeating-linear-gradient(90deg,transparent 0 48px,rgba(255,255,255,.08) 48px 49px);
-      display:grid;
-      place-items:center;
-      color:var(--white);
-      position:relative;
-    }
-    .project-image span{
-      border:1px solid rgba(255,250,240,.45);
-      padding:11px 14px;
-      font:500 11px "IBM Plex Mono",monospace;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-    .project-body{padding:20px 21px 24px}
-    .project-cat{color:var(--brick-dark);font:500 10.5px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.1em}
-    .project h3{font-size:21px;margin:8px 0 6px}
-    .project p{font-size:13.5px;color:var(--steel);margin:0}
-
-    /* MISSION */
-    .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-    .mission-card{
-      border-top:4px solid var(--brick);
-      padding:30px;
-      background:var(--paper-2);
-    }
-    .mission-card:last-child{border-color:var(--steel)}
-    .mission-card h3{font-size:28px;margin:0 0 12px}
-    .mission-card p{color:#554d45;margin:0}
-
-    /* PROCESS */
-    .process{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:0;
-    }
-    .step{padding:0 25px 0 0;border-right:1px solid var(--line);margin-right:25px}
-    .step:last-child{border-right:0;margin-right:0;padding-right:0}
-    .step-line{height:8px;background:var(--sand);margin-bottom:22px}
-    .step:nth-child(1) .step-line{background:var(--brick)}
-    .step:nth-child(2) .step-line{background:var(--brick-dark);margin-left:12%}
-    .step:nth-child(3) .step-line{background:var(--steel);margin-left:24%}
-    .step:nth-child(4) .step-line{background:var(--ink);margin-left:36%}
-    .step-num{color:var(--steel);font:500 11px "IBM Plex Mono",monospace}
-    .step h3{font-size:21px;margin:8px 0 10px}
-    .step p{font-size:14px;color:#5a524a;margin:0}
-
-    /* WHY */
-    .why{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-    .why-card{border-top:2px solid var(--ink);padding-top:17px}
-    .why-card h3{font-size:20px;margin-bottom:7px}
-    .why-card p{font-size:14px;color:#5b534b;margin:0}
-
-    /* FAQ */
-    .faq{max-width:800px}
-    .faq-item{border-bottom:1px solid var(--line)}
-    .faq-q{
-      width:100%;
-      padding:21px 0;
-      border:0;
-      background:transparent;
-      text-align:left;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-      cursor:pointer;
-      color:var(--ink);
-      font:600 19px "Zilla Slab",serif;
-    }
-    .plus{color:var(--brick);font:500 22px "IBM Plex Mono",monospace}
-    .faq-item.open .plus{transform:rotate(45deg)}
-    .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
-    .faq-a p{color:#554d45;font-size:14.5px;max-width:70ch;padding-bottom:21px;margin:0}
-
-    /* CONTACT */
-    .contact{
-      background:var(--ink);
-      color:var(--paper);
-      padding:86px 0;
-    }
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
-    .contact .eyebrow{color:var(--sand)}
-    .contact h2{font-size:clamp(34px,4vw,50px);margin:14px 0 18px}
-    .contact .lede{color:#d0c6b7;max-width:55ch}
-    .contact-list{margin-top:28px}
-    .contact-row{
-      display:flex;
-      gap:18px;
-      padding:13px 0;
-      border-top:1px solid rgba(244,239,229,.16);
-    }
-    .contact-row .key{
-      width:90px;
-      flex:none;
-      color:var(--sand);
-      font:500 10px "IBM Plex Mono",monospace;
-      text-transform:uppercase;
-      letter-spacing:.1em;
-    }
-    .contact-row .value{font-size:15px}
-    .contact-row a{text-decoration:none}
-    .contact-row a:hover{color:var(--sand)}
-    .contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-    .contact .btn.alt{color:var(--paper);border-color:rgba(244,239,229,.35)}
-    .contact .btn.alt:hover{background:var(--paper);color:var(--ink)}
-
-    .quote-box{
-      border:1px solid rgba(244,239,229,.22);
-      padding:32px;
-      background:rgba(244,239,229,.04);
-    }
-    .quote-box h3{font-size:28px;margin-bottom:8px}
-    .quote-box p{color:#cfc4b5;font-size:14px}
-    .quote-box a{margin-top:10px}
-
-    footer{padding:34px 0}
-    .footer-grid{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-    .footer-grid small{color:var(--steel)}
-    .footer-links{display:flex;gap:18px;font-size:13px}
-    .footer-links a{text-decoration:none}
-
-    @media (max-width:950px){
-      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
-      .hero-visual{min-height:420px}
-      .services{grid-template-columns:1fr 1fr}
-      .projects{grid-template-columns:1fr 1fr}
-      .trust-grid{grid-template-columns:1fr 1fr}
-      .trust-item:nth-child(3){border-left:0;border-top:1px solid var(--line)}
-      .trust-item:nth-child(4){border-top:1px solid var(--line)}
-      .process{grid-template-columns:1fr 1fr;gap:35px}
-      .step{border-right:0;margin-right:0;padding-right:0}
-      .why{grid-template-columns:1fr 1fr}
-      .divisions,.team-grid{grid-template-columns:1fr}
-      .team-grid .leader{grid-template-columns:170px 1fr}
-    }
-
-    @media (max-width:720px){
-      .wrap{width:min(var(--max),calc(100% - 32px))}
-      section{padding:70px 0}
-      .hero{padding-top:48px}
-      nav.links,.nav-cta{display:none}
-      .menu-btn{display:block}
-      header.mobile-open nav.links{
-        display:flex;
-        position:absolute;
-        left:16px;
-        right:16px;
-        top:68px;
-        padding:18px;
-        background:var(--paper);
-        border:1px solid var(--line-dark);
-        flex-direction:column;
-        align-items:stretch;
-        gap:0;
+  ],
+  "knowsAbout": [
+    "Civil engineering",
+    "Construction",
+    "Interior design",
+    "Woodwork",
+    "Project management"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Zevston services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Residential Construction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Commercial Construction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Project Management"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Sustainable Building"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Interior Design & Space Planning"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom Woodwork & Furniture"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kitchens & Wardrobes"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Office Interiors"
+        }
       }
-      header.mobile-open nav.links a{padding:12px 4px;border-bottom:1px solid var(--line)}
-      header.mobile-open nav.links a:last-child{border-bottom:0}
-      .leader,.team-grid .leader{grid-template-columns:1fr;padding:24px}
-      .founder-photo{max-width:260px}
-      .projects,.services,.mission-grid,.why{grid-template-columns:1fr}
-      .trust-item{padding:24px 16px}
-      .process{grid-template-columns:1fr}
-      .step{padding-bottom:25px;border-bottom:1px solid var(--line)}
-      .step:last-child{border-bottom:0}
-      .hero h1{font-size:clamp(42px,13vw,62px)}
-      .hero-visual{min-height:360px}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://zevston.com/#website",
+  "url": "https://zevston.com/",
+  "name": "Zevston",
+  "publisher": {
+    "@id": "https://zevston.com/#organization"
+  },
+  "inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Zevston do interior design as well as construction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Zevston has two divisions: civil engineering and construction, and interior design with custom woodwork. They work together, so a project can move from foundation to final finish with one team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who leads Zevston?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zevston is run by two brothers. Muhammad Imran Kabeer, a civil engineer, leads the construction division, and Muhammad Jabran Kabeer, an interior designer, leads the interior design and woodwork division."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of projects does Zevston handle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Residential houses, renovations and additions, offices, shops, commercial spaces, industrial facilities and infrastructure-related work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which area does Zevston serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zevston is based in Lahore, Pakistan. Contact the team to discuss the location and requirements of your project."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Zevston manage a project from planning through completion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Project management and construction coordination are among Zevston's services. The exact scope can be agreed during the initial project discussion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I request a quotation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the quote form on this page, message the team on WhatsApp, or email contact@zevston.com with your project details. They can then discuss the scope, requirements and next steps."
+      }
     }
-
-    @media (prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      *{transition:none!important}
-    }
-  </style>
+  ]
+}
+</script>
 </head>
-
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header id="site-header">
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Zevston home"><img src="logo-mark.png" alt=""><span class="word">Zevston</span></a>
+    <a class="brand" href="/" aria-label="Zevston home"><img src="/logo-mark.png" alt="" width="41" height="46"><span class="word">Zevston</span></a>
 
     <nav class="links" id="main-nav" aria-label="Main navigation">
-      <a href="#expertise">Expertise</a>
-      <a href="#services">Services</a>
-      <a href="#team">Our Team</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="/#expertise">Expertise</a>
+      <a href="/#services">Services</a>
+      <a href="/#team">Our Team</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#contact">Contact</a>
     </nav>
 
-    <a class="btn nav-cta" href="#contact">Request a Quote</a>
-    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <div class="nav-actions">
+      <button type="button" class="icon-btn js-search-open" aria-label="Search the site" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="label">Search</span><span class="kbd">/</span></button>
+      <a class="btn nav-cta" href="/#quote">Request a Quote</a>
+      <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    </div>
   </div>
   <div class="bond"></div>
 </header>
 
-<main id="top">
+<main id="main">
 
   <!-- HERO -->
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">Lahore, Pakistan · Engineering · Construction · Interiors</div>
-        <h1>Building spaces. <span>Creating experiences.</span></h1>
+        <h1>Construction &amp; interior design in <span>Lahore.</span></h1>
         <p class="lede">
-          Zevston brings civil engineering and construction together with interior design and
-          custom woodwork — one team taking a project from foundation to final finish, so you don't
-          need to hire two companies to get there.
+          Zevston is a Lahore construction and interior design company. Civil engineering and building
+          sit alongside interior design and custom woodwork, so one team can take your project from
+          foundation to final finish, with no need to hire two companies.
         </p>
 
         <div class="hero-actions">
@@ -618,7 +271,7 @@
         </div>
 
         <div class="hero-note">
-          <div class="mono" style="color:var(--brick);font-size:11px;">01</div>
+          <div class="mono" style="color:var(--brick);font-size:0.6875rem;">01</div>
           <div>
             <strong>From planning to handover.</strong>
             <p>A single team to coordinate the work, communicate clearly and keep the project moving.</p>
@@ -626,11 +279,10 @@
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="Architectural construction illustration">
+      <div class="hero-visual" role="img" aria-label="Architectural construction illustration">
         <div class="hero-architecture"></div>
         <div class="hero-label">
-          <div class="mono">ZE VSTON · LAHORE</div>
-          <strong>Built with purpose.</strong>
+          <div class="mono">ZEVSTON · LAHORE</div> <strong>Building spaces. Creating experiences.</strong>
         </div>
       </div>
     </div>
@@ -672,29 +324,29 @@
       </div>
 
       <div class="divisions">
-        <a class="division-card" href="#services">
+        <a class="division-card" href="/imran-kabeer/">
           <div class="division-photo">
             <div class="division-tag">Construction</div>
-            <img src="imran.jpg" alt="Muhammad Imran Kabeer, Civil Engineer at Zevston">
+            <img src="/imran.jpg" width="700" height="959" loading="lazy" decoding="async" alt="Muhammad Imran Kabeer, Civil Engineer at Zevston">
           </div>
           <div class="division-body">
             <div class="who">Muhammad Imran Kabeer · Civil Engineer</div>
             <h3>Civil Engineering & Construction</h3>
             <p>Structural coordination, site supervision, project management and full build execution for residential and commercial projects.</p>
-            <span class="division-link">View construction services →</span>
+            <span class="division-link">Imran Kabeer: profile &amp; services →</span>
           </div>
         </a>
 
-        <a class="division-card" href="#services">
+        <a class="division-card" href="/jabran-kabeer/">
           <div class="division-photo">
             <div class="division-tag">Interiors</div>
-            <img src="jabran.jpg" alt="Muhammad Jabran Kabeer, Interior Designer at Zevston">
+            <img src="/jabran.jpg" width="700" height="933" loading="lazy" decoding="async" alt="Muhammad Jabran Kabeer, Interior Designer at Zevston">
           </div>
           <div class="division-body">
             <div class="who">Muhammad Jabran Kabeer · Interior Designer</div>
             <h3>Interior Design & Woodwork</h3>
             <p>Space planning, custom furniture, kitchens, wardrobes and office interiors, finished with in-house woodwork.</p>
-            <span class="division-link">View interior services →</span>
+            <span class="division-link">Jabran Kabeer: profile &amp; services →</span>
           </div>
         </a>
       </div>
@@ -713,8 +365,8 @@
         </p>
       </div>
 
-      <div class="eyebrow" style="margin-bottom:16px;">Civil engineering & construction</div>
-      <div class="services" style="margin-bottom:22px;">
+      <div class="eyebrow" style="margin-bottom:1rem;">Civil engineering & construction</div>
+      <div class="services" style="margin-bottom:1.375rem;">
         <article class="service">
           <div class="num">01 · Residential</div>
           <h3>Residential Construction</h3>
@@ -740,7 +392,7 @@
         </article>
       </div>
 
-      <div class="eyebrow" style="margin-bottom:16px;">Interior design & woodwork</div>
+      <div class="eyebrow" style="margin-bottom:1rem;">Interior design & woodwork</div>
       <div class="services">
         <article class="service">
           <div class="num">05 · Design</div>
@@ -816,7 +468,7 @@
         <div class="leader">
           <div class="founder-photo">
             <img
-              src="imran.jpg"
+              src="/imran.jpg" width="700" height="959" loading="lazy" decoding="async"
               alt="Muhammad Imran Kabeer, Civil Engineer and Construction Lead at Zevston"
               onerror="this.style.display='none';document.getElementById('founder-fallback-1').style.display='grid';"
             >
@@ -824,7 +476,7 @@
           </div>
           <div>
             <div class="role">Civil Engineer · Construction & Project Management</div>
-            <h3>Muhammad Imran Kabeer</h3>
+            <h3><a href="/imran-kabeer/">Muhammad Imran Kabeer</a></h3>
             <p>
               13 years of hands-on experience in Pakistan's construction industry — project planning,
               site supervision, structural coordination and cost management, from residential houses
@@ -835,13 +487,14 @@
               <span class="pill">Site Supervision</span>
               <span class="pill">Quality Control</span>
             </div>
+            <a class="link-arrow" href="/imran-kabeer/">View profile →</a>
           </div>
         </div>
 
         <div class="leader">
           <div class="founder-photo">
             <img
-              src="jabran.jpg"
+              src="/jabran.jpg" width="700" height="933" loading="lazy" decoding="async"
               alt="Muhammad Jabran Kabeer, Interior Designer at Zevston"
               onerror="this.style.display='none';document.getElementById('founder-fallback-2').style.display='grid';"
             >
@@ -849,7 +502,7 @@
           </div>
           <div>
             <div class="role">Interior Designer · Woodwork & Custom Interiors</div>
-            <h3>Muhammad Jabran Kabeer</h3>
+            <h3><a href="/jabran-kabeer/">Muhammad Jabran Kabeer</a></h3>
             <p>
               Leads Zevston's interior division — space planning, custom furniture and in-house
               woodwork for kitchens, wardrobes and office interiors, finished to match each space.
@@ -859,6 +512,7 @@
               <span class="pill">Custom Woodwork</span>
               <span class="pill">Space Planning</span>
             </div>
+            <a class="link-arrow" href="/jabran-kabeer/">View profile →</a>
           </div>
         </div>
       </div>
@@ -872,14 +526,15 @@
         <div class="eyebrow">Project experience</div>
         <h2>Selected work and project experience.</h2>
         <p>
-          The project information below is based on the company's existing project portfolio.
-          Replace the visual placeholders with real project photographs as they become available.
+          A selection of residential, commercial, civil and interior projects from the team's portfolio.
         </p>
       </div>
 
+      <!-- To add a real photo: put the file in /projects/ and replace the <span> inside .project-image with
+             <img src="/projects/name.jpg" alt="Describe the project" width="800" height="600" loading="lazy"> -->
       <div class="projects">
         <article class="project">
-          <div class="project-image"><span>Project photograph</span></div>
+          <div class="project-image" aria-hidden="true"><span>Zevston · Lahore</span></div>
           <div class="project-body">
             <div class="project-cat">Residential</div>
             <h3>DHA Phase 5 House</h3>
@@ -888,16 +543,16 @@
         </article>
 
         <article class="project">
-          <div class="project-image"><span>Project photograph</span></div>
+          <div class="project-image" aria-hidden="true"><span>Zevston · Lahore</span></div>
           <div class="project-body">
             <div class="project-cat">Commercial</div>
             <h3>Grand Hayat Project</h3>
-            <p>Sealing contract for a mixed-use plaza.</p>
+            <p>Mixed-use plaza project.</p>
           </div>
         </article>
 
         <article class="project">
-          <div class="project-image"><span>Project photograph</span></div>
+          <div class="project-image" aria-hidden="true"><span>Zevston · Lahore</span></div>
           <div class="project-body">
             <div class="project-cat">Civil Works</div>
             <h3>Large-Scale Civil Project</h3>
@@ -906,7 +561,7 @@
         </article>
 
         <article class="project">
-          <div class="project-image"><span>Project photograph</span></div>
+          <div class="project-image" aria-hidden="true"><span>Zevston · Lahore</span></div>
           <div class="project-body">
             <div class="project-cat">Interiors</div>
             <h3>Custom Kitchen & Wardrobes</h3>
@@ -915,7 +570,7 @@
         </article>
 
         <article class="project">
-          <div class="project-image"><span>Project photograph</span></div>
+          <div class="project-image" aria-hidden="true"><span>Zevston · Lahore</span></div>
           <div class="project-body">
             <div class="project-cat">Interiors</div>
             <h3>Office Interior Fit-Out</h3>
@@ -924,7 +579,7 @@
         </article>
 
         <article class="project">
-          <div class="project-image"><span>Project photograph</span></div>
+          <div class="project-image" aria-hidden="true"><span>Zevston · Lahore</span></div>
           <div class="project-body">
             <div class="project-cat">Woodwork</div>
             <h3>Custom Furniture Suite</h3>
@@ -1047,9 +702,29 @@
 
       <div class="faq">
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+          <button class="faq-q" aria-expanded="false" type="button">
+            Does Zevston do interior design as well as construction?
+            <span class="plus" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">
+            <p>Yes. Zevston has two divisions: civil engineering and construction, and interior design with custom woodwork. They work together, so a project can move from foundation to final finish with one team.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" type="button">
+            Who leads Zevston?
+            <span class="plus" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">
+            <p>Zevston is run by two brothers. <a href="/imran-kabeer/">Muhammad Imran Kabeer</a>, a civil engineer, leads the construction division, and <a href="/jabran-kabeer/">Muhammad Jabran Kabeer</a>, an interior designer, leads the interior design and woodwork division.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" type="button">
             What types of projects does Zevston handle?
-            <span class="plus">+</span>
+            <span class="plus" aria-hidden="true">+</span>
           </button>
           <div class="faq-a">
             <p>Residential houses, renovations and additions, offices, shops, commercial spaces, industrial facilities and infrastructure-related work.</p>
@@ -1057,9 +732,9 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+          <button class="faq-q" aria-expanded="false" type="button">
             Which area does Zevston serve?
-            <span class="plus">+</span>
+            <span class="plus" aria-hidden="true">+</span>
           </button>
           <div class="faq-a">
             <p>Zevston is based in Lahore, Pakistan. Contact the team to discuss the location and requirements of your project.</p>
@@ -1067,9 +742,9 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+          <button class="faq-q" aria-expanded="false" type="button">
             Can Zevston manage a project from planning through completion?
-            <span class="plus">+</span>
+            <span class="plus" aria-hidden="true">+</span>
           </button>
           <div class="faq-a">
             <p>Project management and construction coordination are among Zevston's services. The exact scope can be agreed during the initial project discussion.</p>
@@ -1077,12 +752,12 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+          <button class="faq-q" aria-expanded="false" type="button">
             How can I request a quotation?
-            <span class="plus">+</span>
+            <span class="plus" aria-hidden="true">+</span>
           </button>
           <div class="faq-a">
-            <p>Email contact@zevston.com or call the team with your project details. They can then discuss the scope, requirements and next steps.</p>
+            <p>Use the quote form on this page, message the team on WhatsApp, or email contact@zevston.com with your project details. They can then discuss the scope, requirements and next steps.</p>
           </div>
         </div>
       </div>
@@ -1095,10 +770,7 @@
       <div>
         <div class="eyebrow">Start a conversation</div>
         <h2>Let's discuss your project.</h2>
-        <p class="lede">
-          Whether you are planning a home, commercial space, renovation or larger construction project,
-          contact Zevston to discuss your requirements.
-        </p>
+        <p class="lede">Whether you are planning a home, commercial space, renovation or larger construction project, contact Zevston to discuss your requirements.</p>
 
         <div class="contact-list">
           <div class="contact-row">
@@ -1120,80 +792,116 @@
 
         <div class="contact-actions">
           <a class="btn brick" href="mailto:contact@zevston.com?subject=Zevston%20Project%20Enquiry">Email Zevston</a>
-          <a class="btn alt" href="https://wa.me/923334434464" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn alt" href="https://wa.me/923334434464?text=Hello%20Zevston%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
 
-      <div class="quote-box">
+      <div class="quote-box" id="quote">
         <div class="eyebrow" style="color:var(--sand)">Request a quote</div>
         <h3>Have a project in mind?</h3>
-        <p>
-          Send a short description of the project by email. Include the project type,
-          approximate location, size/scope and anything else you already know.
-        </p>
-        <a class="btn brick" href="mailto:contact@zevston.com?subject=Zevston%20Request%20for%20Quote&body=Project%20type%3A%0AProject%20location%3A%0AApproximate%20size%2Fscope%3A%0AProject%20details%3A">
-          Send Project Details
-        </a>
+        <p>Tell us a little about it. The message opens in WhatsApp or your email app with everything filled in, ready to send.</p>
+        <form id="quote-form" class="quote-form">
+          <div class="row">
+            <div><label for="q-name">Your name</label><input id="q-name" name="name" type="text" autocomplete="name" required></div>
+            <div><label for="q-phone">Phone</label><input id="q-phone" name="phone" type="tel" autocomplete="tel" placeholder="03XX XXXXXXX"></div>
+          </div>
+          <div class="row">
+            <div><label for="q-service">Service</label>
+          <select id="q-service" name="service">
+            <option>Residential construction</option>
+            <option>Commercial construction</option>
+            <option>Project management</option>
+            <option>Interior design & space planning</option>
+            <option>Custom woodwork & furniture</option>
+            <option>Kitchens & wardrobes</option>
+            <option>Office interiors</option>
+            <option selected>Other / not sure</option>
+          </select></div>
+            <div><label for="q-loc">Project location</label><input id="q-loc" name="location" type="text" placeholder="e.g. DHA Phase 5, Lahore"></div>
+          </div>
+          <div><label for="q-details">Project details</label><textarea id="q-details" name="details" required placeholder="Type of project, approximate size, timeline…"></textarea></div>
+          <div class="actions">
+            <button class="btn wa" type="submit">Send on WhatsApp</button>
+            <button class="btn alt" type="button" id="quote-mail">Send by email</button>
+          </div>
+          <p class="form-note">Nothing is stored on this website. Your message goes directly to the Zevston team.</p>
+        </form>
       </div>
     </div>
   </section>
 
 </main>
-
 <div class="bond"></div>
 
 <footer>
-  <div class="wrap footer-grid">
-    <a class="brand sm" href="#top" aria-label="Zevston home"><img src="logo-mark.png" alt=""><span class="word">Zevston</span></a>
-    <small>© 2026 Zevston Construction · Lahore, Pakistan</small>
-    <div class="footer-links">
-      <a href="#expertise">Expertise</a>
-      <a href="#services">Services</a>
-      <a href="#team">Our Team</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand sm" href="/" aria-label="Zevston home"><img src="/logo-mark.png" alt="" width="41" height="46"><span class="word">Zevston</span></a>
+        <p>Construction, architecture and interiors in Lahore, Pakistan. Civil engineering and interior design under one roof.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/#expertise">Expertise</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#projects">Projects</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Leadership</h4>
+        <ul>
+          <li><a href="/imran-kabeer/">Muhammad Imran Kabeer<br><small>Civil Engineer</small></a></li>
+          <li><a href="/jabran-kabeer/">Muhammad Jabran Kabeer<br><small>Interior Designer</small></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>DHA Phase 5, Lahore</li>
+          <li><a href="tel:+923334434464">0333 4434464</a></li>
+          <li><a href="tel:+923225377072">0322 5377072</a></li>
+          <li><a href="mailto:contact@zevston.com">contact@zevston.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="js-year">2026</span> Zevston · Lahore, Pakistan</span>
+      <span><a href="/sitemap.xml">Sitemap</a></span>
     </div>
   </div>
 </footer>
 
-<script>
-  const header = document.getElementById("site-header");
-  const menuBtn = document.getElementById("menu-btn");
+<a class="wa-float" href="https://wa.me/923334434464?text=Hello%20Zevston%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with Zevston on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg><span>WhatsApp</span></a>
 
-  menuBtn.addEventListener("click", () => {
-    const open = header.classList.toggle("mobile-open");
-    menuBtn.setAttribute("aria-expanded", String(open));
-    menuBtn.textContent = open ? "Close" : "Menu";
-  });
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search Zevston">
+  <div class="search-panel">
+    <div class="search-form">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="search-input" type="search" placeholder="Search services, people, projects…" autocomplete="off" enterkeyhint="search" aria-label="Search this site">
+      <button type="button" class="search-close" id="search-close">Close</button>
+    </div>
+    <div class="search-body">
+      <p class="search-hint" id="search-hint">Try a name, service or topic.</p>
+      <div class="search-chips" id="search-chips">
+        <button type="button" data-q="civil engineer">Civil engineer</button>
+        <button type="button" data-q="interior designer">Interior designer</button>
+        <button type="button" data-q="Imran Kabeer">Imran Kabeer</button>
+        <button type="button" data-q="Jabran Kabeer">Jabran Kabeer</button>
+        <button type="button" data-q="kitchen">Kitchens</button>
+        <button type="button" data-q="contact">Contact</button>
+      </div>
+      <ul class="search-results" id="search-results" aria-live="polite"></ul>
+    </div>
+    <div class="search-google">
+      <span>Looking for something else?</span>
+      <a class="btn alt" id="search-google" target="_blank" rel="noopener" href="https://www.google.com/search?q=site%3Azevston.com">Search zevston.com on Google</a>
+    </div>
+  </div>
+</div>
 
-  document.querySelectorAll("#main-nav a").forEach(link => {
-    link.addEventListener("click", () => {
-      header.classList.remove("mobile-open");
-      menuBtn.setAttribute("aria-expanded", "false");
-      menuBtn.textContent = "Menu";
-    });
-  });
-
-  document.querySelectorAll(".faq-item").forEach(item => {
-    const button = item.querySelector(".faq-q");
-    const answer = item.querySelector(".faq-a");
-
-    button.addEventListener("click", () => {
-      const open = item.classList.contains("open");
-
-      document.querySelectorAll(".faq-item.open").forEach(other => {
-        other.classList.remove("open");
-        other.querySelector(".faq-q").setAttribute("aria-expanded", "false");
-        other.querySelector(".faq-a").style.maxHeight = null;
-      });
-
-      if (!open) {
-        item.classList.add("open");
-        button.setAttribute("aria-expanded", "true");
-        answer.style.maxHeight = answer.scrollHeight + "px";
-      }
-    });
-  });
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
