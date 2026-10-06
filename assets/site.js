@@ -14,19 +14,19 @@
     { t: 'Zevston: Home', u: '/', k: 'home zevston construction interior design lahore company',
       x: 'Construction, civil engineering and interior design company in Lahore, Pakistan.' },
 
-    { t: 'Muhammad Imran Kabeer: Civil Engineer', u: '/imran-kabeer/',
-      k: 'muhammad imran kabeer civil engineer construction head site supervision',
-      x: 'Civil engineer in Lahore with 13 years of experience. Leads construction and project management at Zevston.' },
-    { t: 'Muhammad Jabran Kabeer: Interior Designer', u: '/jabran-kabeer/',
-      k: 'muhammad jabran kabeer interior designer woodwork furniture head',
-      x: 'Interior designer in Lahore. Leads interior design and custom woodwork at Zevston.' },
+    { t: 'Muhammad Imran Kabeer: Co-Founder, Civil Engineering & Construction', u: '/imran-kabeer/',
+      k: 'muhammad imran kabeer co-founder cofounder founder civil engineer construction head site supervision',
+      x: 'Co-founder of Zevston and civil engineer in Lahore with 13 years of experience. Leads construction and project management.' },
+    { t: 'Muhammad Jabran Kabeer: Co-Founder, Interiors, Woodwork & Décor', u: '/jabran-kabeer/',
+      k: 'muhammad jabran kabeer co-founder cofounder founder interior designer interiors decor woodwork furniture head',
+      x: 'Co-founder of Zevston in Lahore. Leads interiors, custom woodwork and décor.' },
 
     { t: 'Civil Engineering & Construction', u: '/imran-kabeer/#services',
       k: 'civil engineer construction builder contractor imran division',
       x: 'Structural coordination, site supervision, project management and full build execution.' },
-    { t: 'Interior Design & Woodwork', u: '/jabran-kabeer/#services',
-      k: 'interior designer interiors woodwork carpenter jabran division',
-      x: 'Space planning, custom furniture, kitchens, wardrobes and office interiors.' },
+    { t: 'Interiors, Woodwork & Décor', u: '/jabran-kabeer/#services',
+      k: 'interior design designer interiors decor woodwork carpenter jabran division',
+      x: 'Space planning, décor, custom furniture, kitchens, wardrobes and office interiors.' },
 
     { t: 'Residential Construction', u: '/imran-kabeer/#services',
       k: 'house home villa renovation addition build residential',
@@ -62,8 +62,11 @@
       x: 'Project types, areas served, planning to completion and how to request a quotation.' },
     { t: 'Request a Quote', u: '/#quote', k: 'quote quotation estimate price enquiry form',
       x: 'Send your project details by WhatsApp or email.' },
+    { t: 'Follow Zevston on social media', u: '/#contact',
+      k: 'facebook instagram youtube social media follow videos photos reels',
+      x: 'Zevston on Facebook, Instagram and YouTube.' },
     { t: 'Contact Zevston', u: '/#contact', k: 'contact phone call email whatsapp address location dha phase 5 lahore',
-      x: 'DHA Phase 5, Lahore. Phone 0333 4434464 and 0322 5377072. Email contact@zevston.com.' }
+      x: 'DHA Phase 5, Lahore. Phone 0333 4434464 and 0304 7676222. Email contact@zevston.com.' }
   ];
 
   /* ---------- helpers ---------- */
